@@ -1,0 +1,31 @@
+.box1{
+    border: 2px solid red;
+    background-color: red;
+    height: 600px;
+    margin: 30px;
+}
+ /*  fly-in animation  */
+ .fly-in {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .fly-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .box2{
+    border: 2px solid green;
+    background-color: green;
+    height: 600px;
+    margin: 30px;
+  }
+
+  .box3{
+    border: 2px solid yellow;
+    background-color: yellow;
+    height: 600px;
+    margin: 30px;
+  }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>once the animation is done you have to reload the page to play it again</h1>
+    <div class="box1">
+<h1>with no animation</h1>
+    </div>
+    <div class="box2 fly-in">
+        <h1> With animation</h1>
+    </div>
+    <div class="box3 fly-in">
+        <h1>Also with animation</h1>
+    </div>
+</body>
+
+  <!-- JavaScript for triggering fly-in animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elementsToAnimate = document.querySelectorAll('.fly-in');
+
+      function checkScroll() {
+        const triggerBottom = window.innerHeight * 0.8;
+        elementsToAnimate.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < triggerBottom) {
+            element.classList.add('show');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', checkScroll);
+      checkScroll(); // Trigger check on page load
+    });
+  </script>
+</html>
